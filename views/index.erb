@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-lg-12">
-    <h1>You see a plaque. It reads...Two paths lie ahead of you, pick (Right or Left) now to start  your journey!</h1>
+    <h1><%= @read_this%></h1>
   </div>
 </div>
 <!-- <form action="/output" method="post"> -->
@@ -14,9 +14,9 @@
   </div> -->
 <!-- </form> -->
 
-<form action="/output" method="post">
+<form action="/next_room" method="post">
   <div class="form-group">
-    <label for="which_way">Answer this: <%= @the_direction %>  </label>
+    <label for="which_way">Pick your path: <%= @the_direction %>  </label>
     <input id="1" name="which_way" class="form-control" type="text">
   </div>
   <button type="submit" class="btn btn-primary btn-block">GO!</button>

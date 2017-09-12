@@ -5,13 +5,19 @@ require('./lib/maze')
 require('pry')
 
 new_maze = Maze.new
+
 get('/') do
   new_maze = Maze.new
+  @read_this = new_maze.path_checkr
   erb(:index)
 end
 
-post('/output') do
+post('/next_room') do
   new_maze.navigate(params.fetch("which_way"))
   @read_this = new_maze.path_checkr
-  erb(:next_room)
+  if new_maze.win_page
+    erb(:end_room)
+  else
+    erb(:next_room)
+  end
 end
