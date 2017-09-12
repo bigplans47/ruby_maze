@@ -25,15 +25,15 @@ class Maze
       "You see a light up ahead...You made it to the city of Atlantis"
     elsif @user_path == ["L"]
       @user_items.push("key")
-      "You have found a mysterious key with your name written on it. You figure since it has your name on it, it is your destiny to take it. You store it in your pocket. Pick your next path."
+      "You have found a mysterious key with your name written on it. You figure since it has your name on it. It is your destiny to take it. You store it in your pocket. Pick your next path."
     elsif @user_path == ["R","R"]
       @user_path.pop
       @user_items.push("protection-amulet")
-      "You have walked up to the edge of an underground waterfall. You are forced to turn back but find an amulet to protect you. Pick a different path..."
+      "You have walked up to the edge of an underground waterfall. You are forced to turn back. On your way out, you find an amulet of protection and place it around your neck. Pick a different path..."
     elsif @user_path == ["R","L","R"]
       if @user_items.include?("protection-amulet")
         @win_page = true
-        "You have reached a cavern filles with a glistening underground lake. But! Then the water begins to rise and form a figure. It's Posiedon!! He demands you leave his presence at once or face eternal water baording. You refuse and drink with him. Posiedon is impressed with you and takes you to Atlantis, you win"
+        "You have reached a cavern filles with a glistening underground lake. But! Then the water begins to rise and form a figure. It's Posiedon!! He demands you leave his presence at once or face eternal water boarding. You refuse and drink with him. Posiedon is impressed with you and takes you to Atlantis, you win"
       else
       @user_path = []
       # @user_items.push("forgetfulness-juice")
