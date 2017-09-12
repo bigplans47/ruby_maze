@@ -1,0 +1,9 @@
+<h1><%= @read_this %></h1>
+
+<form action="/output" method="post">
+  <div class="form-group">
+    <label for="which_way">Answer this: <%= @the_direction %>  </label>
+    <input id="1" name="which_way" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn btn-primary btn-block">GO!</button>
+</form>
