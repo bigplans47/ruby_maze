@@ -33,7 +33,8 @@ class Maze
     elsif @user_path == ["R","L","R"]
       if @user_items.include?("protection-amulet")
         @win_page = true
-        "You have reached a cavern filles with a glistening underground lake. But! Then the water begins to rise and form a figure. It's Posiedon!! He demands you leave his presence at once or face eternal water boarding. You refuse and drink with him. Posiedon is impressed with you and takes you to Atlantis, you win"
+        # <img src="public/Poseidon.jpg">
+        "You have reached a cavern filles with a glistening underground lake. But! Then the water begins to rise and form a figure. It's Poseidon!! He demands you leave his presence at once or face eternal water boarding. You refuse and drink with him. Poseidon is impressed with you and takes you to Atlantis, you win"
       else
       @user_path = []
       # @user_items.push("forgetfulness-juice")
